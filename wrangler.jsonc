@@ -1,0 +1,26 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "mailcow-bridge",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-10-08",
+	"upload_source_maps": true,
+	"assets": {
+		"binding": "ASSETS",
+		"directory": "./public",
+		"run_worker_first": ["/"]
+	},
+	"vars": {
+		"ROUTE_ADDRESS": "admin@sozla.app",
+		"FORWARD_TO": "azmv21@gmail.com",
+		"ALLOWED_SENDERS": "azmv21@gmail.com"
+	},
+	// Uncomment this top-level section after replacing the example address.
+	// Each entry creates an Email Routing rule managed by Wrangler.
+	// "addresses": [
+	// 	"support@company.example"
+	// 	// Use "*@company.example" instead to route every unmatched address.
+	// ],
+	"observability": {
+		"enabled": true
+	}
+}
